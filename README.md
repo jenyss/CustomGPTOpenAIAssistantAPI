@@ -1,5 +1,7 @@
 # Custom GPT using OpenAI Assistant API
 
+This Assistant processes documents and answers user queries with relevant context. It ingests PDFs and text files, breaks them into chunks, and stores them in a vector database for efficient retrieval. When a user asks a question, it searches for the most relevant document snippets and provides a response with citations.
+
 ## How it works
 
 1️⃣ **Document Ingestion & Embedding (One-Time Process)**
@@ -19,9 +21,35 @@
   * Relevant text snippets.
   * Citations with source and page number.<br><br>
 
-3️⃣ OpenAI Assistant Handles User Queries
-A thread is created (client.beta.threads.create()).
-The user’s message is added to the thread.
-The assistant automatically calls search_docs using function calling.
-Your polling loop detects requires_action status, retrieves documents, and submits tool outputs.
-The assistant receives the retrieved document snippets and generates a response.
+3️⃣ **OpenAI Assistant Handles User Queries**
+* A thread is created (```client.beta.threads.create()```).
+* The user’s message is added to the thread.
+* The assistant **automatically calls** ```search_docs``` **using function calling**.
+* The polling loop **detects** ```requires_action``` **status**, retrieves documents, and submits tool outputs.
+* The assistant receives the retrieved document snippets and **generates a response**.
+
+## Intallation
+
+<b>Prerequisites</b>
+
+* Access to <b>JupyterLab, Google Colab</b>, or another interactive computing environment to run this Jupyter Notebook.
+
+### Step 1: Clone the Repository
+
+Clone this repository to your local machine:
+```
+git clone <REPOSITORY_URL>
+cd <PROJECT_FOLDER>
+```
+
+### Step 2: Open Jupyter Notebook in JupyterLab
+
+Ensure that ```<PROJECT_FOLDER>``` is accessible in JupyterLab by setting it as your working directory in JupyterLab.
+ * In JupyterLab, use the "Open from Path" option to load ```CustomGPTOpenAIAssistantAPI.ipynb```.
+ * Similarly, load ```.env``` and populate the variable keys with appropriate values.
+ * The first cell in the Notebook installs the required libraries: **TODO**
+
+### Step 3: Run the Jupyter Notebook
+
+To execute the notebook, select each cell and press ```Shift + Enter```.
+
