@@ -19,7 +19,7 @@ This Assistant processes documents and answers user queries with relevant contex
 * Retrieves **top-k most relevant document chunks**.
 * Formats the response, including:
   * Relevant text snippets.
-  * Citations with source and page number.<br><br>
+  * Citations with source and page number.<br>
 
 3️⃣ **OpenAI Assistant Handles User Queries**
 * A thread is created (```client.beta.threads.create()```).
