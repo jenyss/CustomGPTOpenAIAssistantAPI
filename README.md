@@ -2,6 +2,10 @@
 
 This Assistant processes documents and answers user queries with relevant context. It ingests PDFs and text files, breaks them into chunks, and stores them in a vector database for efficient retrieval. When a user asks a question, it searches for the most relevant document snippets and provides a response with citations.
 
+This [CustomGPTLangGraph](https://github.com/jenyss/CustomGPTLangGraph) is an improved version, implemented in LangGraph which I recommend using instead.
+
+If you have any questions or would like to collaborate, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jenya-stoeva-60477249/). You're more than welcome!
+
 ## How it works
 
 1️⃣ **Document Ingestion & Embedding (One-Time Process)**
